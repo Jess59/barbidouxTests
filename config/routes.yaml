@@ -1,0 +1,25 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+#app_index:
+#  path: /
+#  controller: App\Controller\IndexController::index
+#app_register:
+#  resource: ../src/Controller/RegistrationController.php
+#  type: annotation
+#app_login:
+#  resource: ../src/Controller/UserController.php
+#  type: annotation
+#app_hike:
+#  resource: ../src/Controller/HikeController.php
+ # type: annotation
+#app_conseils:
+#  resource: ../src/Controller/ConseilsController.php
+#  type: annotation
+
+#app_notre_histoire:
+#  resource: ../src/Controller/NotreHistoireController.php
+#  type: annotation
+
+

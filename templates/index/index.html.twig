@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<main id="mainIndex">
+        {# Section 1 #}
+        <section>
+            <div class="texte">
+                <h1 class="soeureinement">Soeureinement</h1>
+                <h4>Vivez pleinement avancez soeureinement</h4>
+                <p>Tout a commencé avec Laura, une passionnée de randonnée, de bien-être et d'autonomisation féminine.</p>
+                <br>
+                 <a href="{{ path('app_notre_histoire') }}">Notre histoire</a>  
+            </div>
+            <div class="imageAcceuil">
+                <img src="{{ asset('/img/1background1acceuil.png')}}" alt="backgroundacceuil">
+            </div>
+        </section>
+        {# Section 2 #}
+        <section>
+        <div class="imageAcceuil">
+            <img src="{{ asset('/img/photoacceuil_2.jpg')}}" alt="photoacceuil_2">
+
+        </div>
+        <div class="texte">
+
+            <h3 class="firstLineTitle">Passionnée </h3>
+            <h2 class="secondLineTitle">De randonnée</h2>
+
+            <p>Tout a commencé avec Diougal, une passionnée de randonnée, de bien-être et d'autonomisation féminine.
+                Elle a constaté que de nombreuses femmes hésitaient à se lancer dans la randonnée en raison de divers
+                obstacles, allant de la sécurité personnelle à l'anxiété liée à l'aventure en plein air. </p>
+            <br>
+            <a href="{{ path('app_hike') }}">Nos randonnées</a>
+        </div>
+    </section>
+    
+    {# Section 3 #}
+    <section>
+        <div class="texte">
+                <h3 class="firstLineTitle">Votre</h3>
+                <h2 class="secondLineTitle">Bien-être </h2>
+               
+                <p>
+                    Sous le ciel clément d'une matinée d'automne, un petit groupe de femmes s'était donné rendez-vous au
+                    pied d'une montagne majestueuse. Leur objectif était simple : explorer la nature, se reconnecter à
+                    elles-mêmes, et trouver la paix intérieure à travers une journée de randonnée.
+                    Les sentiers étaient bordés de couleurs automnales éclatantes, et le doux parfum des feuilles
+                    tombées imprégnait l'air. Les femmes marchaient à un rythme tranquille, prenant le temps d'admirer
+                    la beauté qui les entourait. La nature leur offrait un spectacle vibrant de couleurs et de sons.
+                </p>
+                <br>
+                <a href="{{ path('app_notre_histoire') }}">Nos ateliers</a>
+        </div>
+        <div>
+            <img src="{{ asset('/img/img_bienEtre1.png')}}" alt="imagebienetre">
+        </div>
+    </section>
+    {# Section focus #}
+    <section class="focus">
+        <div>
+            <img id="imgfocusIndex" src="{{ asset('/img/photo4acceuil.JPG')}}" alt="photo4acceuil">  
+        </div>
+        <div class="texte">
+            <h3 class="firstLineTitle">Nos</h3>
+            <h2 class="secondLineTitle">randonnées</h2>
+            <p>
+                Sous le ciel clément d'une matinée d'automne, un petit groupe de femmes s'était donné rendez-vous au
+                pied d'une montagne majestueuse. Leur objectif était simple : explorer la nature, se reconnecter à
+                elles-mêmes, et trouver la paix intérieure à travers une journée de randonnée.
+                Les sentiers étaient bordés de couleurs automnales éclatantes, et le doux parfum des feuilles tombées
+                imprégnait l'air. Les femmes marchaient à un rythme tranquille, prenant le temps d'admirer la beauté qui
+                les entourait. La nature leur offrait un spectacle vibrant de couleurs et de sons.
+            </p>
+            <br>
+            <a href="{{ path('app_hike') }}">Nos Randonnées</a>
+        </div>
+    </section>
+</main>
+{% endblock %}

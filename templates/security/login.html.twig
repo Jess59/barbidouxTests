@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    
+<main id="mainConnexion">
+    <!-----container de tous les divs-------------->
+    <div id="container">
+        <div id="connexion">
+
+        <form method="post" id="formConnexion" >
+            <!---------------Titre de la page-------->
+            <h1 class="h1Titre">Je me connecte</h1>
+            <!-------Formulaire de connexion------------------>
+    
+            <input type="text" size="30" value="{{ last_username }}" name="mailUser" id="inputMailUser" class="form-control" autocomplete="username" required autofocus placeholder ="Email">
+          
+            <input type="password" size="30" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required placeholder ="Mot de pasee">
+{% if error %}
+    <div class="alert-danger">
+        {{ error.messageKey|trans(error.messageData, 'security') }}
+    </div>
+{% endif %}
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate')}}">
+            
+            <button id="btnSeConnecter" type="submit">Se connecter</button>
+
+             <a class="modifMdp" href="">
+                Modifier mot de passe
+            </a>
+           
+            <!--------------Ligne vert qui separe mdp du boutton --------->
+            <hr>
+            <p>Je n'ai pas encore de compte?</p><br>
+            <!------------------Button clicable qui deploie le formulaire d'insciption au clic-------------------------->
+            <a id="btnJeMinscris" href="{{ path('app_register') }}">Je m'inscris</a>
+        </div>
+    </div>
+
+    <figure>
+        <img class="imgConnex" src="/img/photoConnexion2.png"alt="Image connexion un prés vert">
+    </figure>
+</main>
+<!---------------------------------------------------"END OF  MAIN"-------------------------------------------->
+</form>
+{% endblock %}
+

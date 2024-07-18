@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Hike{% endblock %}
+
+{% block body %}
+<main id='mainEditHike'>
+    <h1 class="h1Titre">Modifier la randonnée</h1>
+    <div id="containerEditHike">
+        <div id="editHike">
+
+            {{ form_start(form) }}
+            <div id="formEditR">
+                {{ form_errors(form) }}
+
+                {{ form_row(form.nameHike, {'attr': {'class': 'form-field','placeholder': 'Nom de la randonnée','id': 'nomNewRando'}, 'label': false }) }}
+                {{ form_row(form.descHike, { 'attr': {'class': 'form-field','placeholder': 'Description','id': 'descNewRando'}, 'label': false }) }}
+                {{ form_row(form.cityHike, { 'attr': {'class': 'form-field','placeholder': 'Ville','id': 'villeNewRando'}, 'label': false }) }}
+                {{ form_row(form.timeHike, {'attr': {'class': 'form-field','placeholder': 'Temps','id': 'dureeNewRando'}, 'label': false }) }}
+                {{ form_row(form.distHike, {'attr': {'class': 'form-field','placeholder': 'Distance','id': 'distanceNewRando'}, 'label': false }) }}
+                {{ form_row(form.heightHike, {'attr': {'class': 'form-field','placeholder': 'Dénivelé haut','id': 'denivelePositifNewRando'}, 'label': false }) }}
+                {{ form_row(form.downHike, {'attr': {'class': 'form-field','placeholder': 'Dénivelé bas','id': 'deniveleNegatifNewRando'}, 'label': false }) }}
+                {{ form_row(form.difficultyHike, {'attr': {'class': 'form-field','placeholder': 'Difficulté de la randonnée','id': 'difficulteNewRando'}, 'label': false }) }}
+            </div>
+
+            <div id='formActions'>
+                <button type="submit" class="btn" id="btnsEnregEdit">Modifier</button>
+          
+
+             {{ form_end(form) }} 
+             <form method="post" action="{{ path('app_admin_delete', {'id': hike.id}) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cette randonnée ?');" style="margin: 0;">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ hike.id) }}">
+                    <button id="btnDelete" class="btn btn-danger">Supprimer</button>
+             </div>
+           
+            <div id='deleteAndReturn'>
+             </form>
+            <a href="{{ path('app_admin_index') }}" id="retListLink">Retour à la liste</a>
+            </div>
+        </div>
+    </div>
+    
+</main>
+{% endblock %}

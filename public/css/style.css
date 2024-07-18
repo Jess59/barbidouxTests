@@ -1,0 +1,2133 @@
+/*We remove the default margins and padding to define the size of each element ourselves.*/
+*{ 
+    font-weight: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth; /**ajout un effet au scroll vers les a ()*/
+}
+a{
+    text-decoration: none;
+    color: #4B570D;
+    font-family: ralewayRegular;
+}
+ul{
+    list-style: none;
+}
+p{
+    color:#683614 ;
+    font-family: ralewayRegular;
+    text-align: center;
+}
+/*******************************************************FONTS*******************************************/
+@font-face {
+    font-family: 'yesevaOne';
+    src: url('../fonts/YesevaOne-Regular.eot');
+    src: url('../fonts/YesevaOne-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/YesevaOne-Regular1.woff2') format('woff2'),
+        url('../fonts/YesevaOne-Regular2.woff') format('woff'),
+        url('../fonts/YesevaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ralewayThin';
+    src: url('../fonts/Raleway-Thin.eot');
+    src: url('../fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Thin.woff2') format('woff2'),
+        url('../fonts/Raleway-Thin.woff') format('woff'),
+        url('../fonts/Raleway-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ralewayBold';
+    src: url('../fonts/Raleway-Bold.eot');
+    src: url('../fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Bold.woff2') format('woff2'),
+        url('../fonts/Raleway-Bold.woff') format('woff'),
+        url('../fonts/Raleway-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'RalewayLight';
+    src: url('../fonts/Raleway-Light.eot');
+    src: url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Light.woff2') format('woff2'),
+        url('../fonts/Raleway-Light.woff') format('woff'),
+        url('../fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ralewayRegular';
+    src: url('../fonts/Raleway-Regular.eot');
+    src: url('../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Regular2.woff2') format('woff2'),
+        url('../fonts/Raleway-Regular.woff') format('woff'),
+        url('../fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'ralewaySemiBold';
+    src: url('../fonts/Raleway-SemiBold.eot');
+    src: url('../fonts/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-SemiBold.woff2') format('woff2'),
+        url('../fonts/Raleway-SemiBold.woff') format('woff'),
+        url('../fonts/Raleway-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+/***********************************************FIN FONT********************************************************/
+/***********************************************HEADER**********************************************************/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 5px;
+    align-items: center;
+    height: 70px;
+}
+header>div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header div img {
+    width: 30px;
+    height:30px;
+    margin: 0 10px;
+}
+header div p {
+    color:#4B570D;
+    font-weight: bold;
+    justify-content: flex-end;
+    margin-top: 5px;
+    font-family: yesevaOne;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+header nav ul {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+header nav ul li{
+    margin-right: 45px;
+}
+header nav ul a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #4B570D;
+    font-family: ralewayRegular;
+}
+header nav ul li:nth-child(4) {/***petit trait */
+    color: #683614; /* Couleur marron */
+}
+header nav ul li:last-of-type img{
+    height: 20px;
+}
+/******************************************FIN HEADER*************************************************************/
+/****************************************** FOOTER***************************************************************/
+footer{
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 50px 0;
+color: #4B570D;
+background-color: #ECD7C2;
+
+}
+
+footer section{
+display: flex;
+justify-content: space-between;
+width: 80%;
+}
+
+#firstSectionFooter{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+footer section div{
+display: flex;
+justify-content: center;
+align-items: center;
+ width: 33%;
+}
+
+#logoFooter{
+flex-direction: column;
+}
+#logoFooter img{
+width: 30%;
+margin-bottom: 15px;
+}
+
+.firstLiFooter a {
+font-weight: bold;
+}
+
+.firstLiFooter {
+font-weight: bold;
+font-family: 'ralewayRegular';
+padding-bottom: 10px;
+
+}
+
+#sectionMentionsLegales{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 30px;
+}
+#sectionMentionsLegales ul li{
+display: inline-block; 
+padding: 10px;
+}
+
+#NousSuivre {
+text-align: center;
+}
+
+
+footer ul{
+list-style: none;
+flex-wrap: wrap;
+
+    
+}
+#logoshoes{
+    width: 24px;
+    height: 24px;
+}
+#logoinsta{
+    width: 40px;
+    margin-top: 10px;
+}
+
+
+/***********************************************END FOOTER*****************************************************/
+/************************************************INDEX********************************************************/
+body {
+    background-color: #FFF7EE;
+    height: 100vh;
+    margin : 0 auto;
+}
+#mainIndex .texte{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 5px;
+}
+h4 {
+    color: #c68d5e;
+    font-size: 25px;
+    font-family: ralewayRegular;
+}
+.texte a{
+    color: #FFF7EE;
+    background-color: #DC5527;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+#mainIndex .texte a:hover{
+    background-color: #FF5C24;
+}
+#mainIndex .firstLineTitle{
+    color: #c68d5e;
+    font-size: 40px;
+    font-family: yesevaOne;
+}
+    
+#mainIndex .secondLineTitle{
+    color: #4b570d;
+    font-size: 60px;
+    font-family: yesevaOne;
+}
+/******************************************DEBUT SECTION 1********************************/
+#mainIndex section:nth-of-type(1) {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#mainIndex section:nth-of-type(1) div img {
+    height: 60vw;
+    max-height:600px;
+    display:block;
+}
+#mainIndex .soeureinement{
+    color: #4B570D;
+    font-size: 60px;
+    font-family: yesevaOne;
+}
+#mainIndex section:nth-of-type(1) .texte {
+    margin-left: 70px;
+}
+/**********************************************FIN SECTION 1******************************************************/
+/*********************************************DEBUT SECTION 2*****************************************************/
+#mainIndex section:nth-of-type(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#mainIndex section:nth-of-type(2) img {
+    height: 70vw;
+    max-height:700px;
+    display: block;
+}
+#mainIndex section:nth-of-type(2).texte {
+    margin-left: 70px;
+}
+/**********************************************FIN SECTION 2*****************************************************/
+/********************************************DEBUT SECTION 3****************************************************/
+#mainIndex section:nth-of-type(3){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#mainIndex section:nth-of-type(3) img {
+    height: 70vw;
+    max-height: 700px;
+    margin-bottom:20px; 
+}
+#mainIndex section p{
+    margin-top: 10px;
+    line-height: 20px ;
+}
+/******************************************FIN SECTION 3*******************************************************/
+/******************************************DEBUT FOCUS********************************************************/
+ #mainIndex .focus {
+    width: 80%;
+    padding: 50px;
+    background:mistyrose;
+    margin: 20px auto;
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap; 
+}   
+#mainIndex .focus>div:first-of-type{
+    overflow: hidden;
+}
+#mainIndex .focus>div:nth-of-type(2){
+margin: 0 auto;
+}
+#mainIndex #imgfocusIndex{
+    width: 350px;
+    max-height: 400px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+#mainIndex .focus>div{
+    margin-right: 30px;
+}
+
+/*********************************************FIN FOCUS********************************************************/
+/******************************************ADMIN***************************************************************/
+#mainAdmin{
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+#formAdmin{
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+#formAdmin h2 {
+    color: #4B570D;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+/*************************************MODIF CHAMP TEXTE FORMULAIRE**********************************************/
+input[type=text], [type=datetime-local],[type=number], textarea{
+    padding: 12px 20px;
+    display: inline-block;
+    background-color: #FFF3E6;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px solid #683614;
+    font-family: "ralewayThin";
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+/*********************************FIN MODIF CHAMP TEXTE FORMULAIRE*********************************************/
+#formAdmin textarea {
+    height: 150px;
+    width: 635px;
+}
+/***********************************MODIF BOUTON SUBMIT FORMULAIRE********************************************/
+  input[type=submit] {
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    width: 20%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+  input[type=submit]:hover{
+    background-color: #FF5C24;
+}
+/********************************* FIN MODIF BOUTON SUBMIT FORMULAIRE******************************************/
+/*****************************************FIN ADMIN************************************************************/
+
+
+/***************************************** BEGINNING MAP******************************************************/
+#mainMap .firstLineTitle{
+    color: #c68d5e;
+    font-size: 50px;
+    text-indent:-20% ;
+}
+    
+#mainMap .secondLineTitle{
+    color: #4b570d;
+    margin-bottom: 5px;
+    padding: 20px;
+    font-size: 60px;
+}       
+#mainimg {
+     height: 50%;   
+}
+#mainMap  { 
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: "30vw";
+}
+
+
+/* END MAP */
+
+
+/****BEGINNING RandoDetail********/
+
+#randoDetail{
+
+    flex-direction: column;
+}   
+
+#sectionRandoDetails{
+    display: flex;
+}
+      
+#asideButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+#randoDetail aside button{ 
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#randoDetail main section ol{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+    
+#randoDetail  main section ol li{
+    line-height: 20px;
+    color: #683614;
+}
+#randoDetail figure img{
+    max-width: 400px;
+    height: 500px;
+     margin: 50px;
+    border-radius: 5%;
+}
+
+    
+#randoDetail .firstLineTitle{
+    color: #c68d5e;
+    font-size: 50px;
+}     
+#randoDetail .secondLineTitle{
+    color: #4b570d;
+    margin-bottom: 5px;
+    padding: 20px;
+    font-size: 60px;
+    text-indent: 15%
+} 
+#randoDetail section h4{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bolder;
+    color: #683614;
+}  
+#randoDetail section p {
+    line-height: 20px;   
+}
+#avis{
+     margin-top: 40px;
+    padding: 20px;
+    color: #683614;
+}   
+#addReview{
+     margin-bottom: 15px;  
+}
+    
+#randoDetail .accordion {
+     background-color: #FFF7EE;
+     color: #683614;
+     cursor: pointer;
+     padding: 18px;
+     width: 100%;
+    text-align: left;
+     border: none;
+    outline: none;
+     transition: 0.4s;
+}
+    
+    
+#randoDetail .panel {
+    padding: 0 18px;
+    background-color: #FFF7EE;
+    display: none;
+     overflow: hidden;
+}
+    
+#randoDetail .active, .accordion:hover {
+    background-color: #FFF7EE;
+    color: #683614;
+}
+    
+#randoDetail .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #FFF7EE ;
+    float: right;
+    margin-left: 5px;
+     color: #683614;
+}
+      
+#randoDetail .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    color: #683614;
+}
+
+#randoDetail .pictureAccordion {
+    height: 300px;
+    border-radius: 5%;
+}
+    
+#randoDetail .form-check-input{
+     color: #683614;
+}
+    
+/******FORM******/
+
+#randoDetail .row{
+    padding-top: 30px;
+    padding-bottom: 15px;
+    color: #683614;
+    font-weight: bold;     
+}
+    
+#randoDetail .mb-3{
+    color: #683614;
+}
+    
+#emailHelp{
+    color: #683614;
+}   
+#check{
+    color: #683614; 
+}  
+#randoDetail  textarea {
+    padding: 12px 20px;
+    display: inline-block;
+     background-color: #FFF3E6;
+     border-radius: 4px;
+     box-sizing: border-box;
+     border: 1px solid #683614;
+     font-family: "ralewayThin";
+     font-size: 16px;
+     outline: none;
+}   
+#buttonFrom{
+    display: flex;
+    justify-content: flex-end;
+}
+#buttonSend{
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+/************************************BEGINNING FOCUS**********************************************************/   
+#focusCard{
+    display: flex;
+} 
+#focusRandoDetail{
+    width: 80%;
+     padding: 50px;
+    background:mistyrose;
+    margin: 20px auto;
+    border-radius: 50px;
+}
+#focusRandoDetail a{
+     color: #683614;
+}
+#cardRandoDetail{
+    max-width: 30%;
+    max-height: 600px;
+    position: relative;
+    margin:  35px;
+}   
+#cardRandoDetail img{
+    border-radius: 20px;
+     height: 250px;
+}      
+#cardRandoDetail button{
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+     cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+#cardRandoDetail button:hover{
+    background-color: #FF5C24;
+}
+#cardRandoDetail #titreCard {
+    color: #4B570D;}
+    .card a:link{
+    color: #683614;
+}
+#cardRandoDetail a:hover{
+    border-bottom: 2px solid #683614;
+}
+#cardRandoDetail .niveau {
+    background-color: #FFF3E6;
+    border-radius: 8px;
+    border: 2px solid #4B570D;
+    text-align: center;
+    width: 20%;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 14px;
+}
+    
+#linkFocusSeeHinking{
+    display: flex;
+    justify-content: flex-end;
+}
+/***********************************************END FOCUS*******************************************************/
+/********************************************END RandoDetail****************************************************/
+
+
+/********************************************CONSEILS MAIN******************************************************/
+#conseils {
+    display: flex;
+}
+#asideConseils{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#nosConseils{
+margin: 30px;
+border: 2 px solid green;
+}      
+
+#conseils aside figure img {
+max-width: 450px;
+}
+#conseils aside button{
+margin-top: 30px;
+background-color:#DC5527;
+color: #FFF3E6;
+padding: 8px 30px;
+display: block;
+width: 80%;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+font-size: 14px;
+ 
+}
+#conseils aside div{
+    margin-top: 40px;
+}
+#conseils .firstLineTitle{
+    color: #c68d5e;
+    font-size: 30px;
+    text-indent:10%;
+    font-family: yesevaOne;
+}
+    
+#conseils .secondLineTitle{
+    color: #4b570d;
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-family: yesevaOne;
+}
+.elementFocus{
+    max-height: 350px ;
+    background:mistyrose;
+    margin:150px auto;
+    border-radius: 50px;
+    display: flex; 
+}
+#conseils .divFocus>div:first-of-type{
+    overflow: hidden;
+}
+#conseils .focus>div:nth-of-type(2){
+margin: 0 auto;
+}
+#conseils .divFocus{
+    width: 30%;
+}
+#conseils .imgFocus {
+    height: 300px;
+    border-radius: 15px;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding: 10px;
+} 
+#conseils .texte{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-height: 350px ;
+    width: 100%;
+}
+#focusConseils_1{
+    display: block;
+}
+#focusConseils_2{
+    display: none;
+}
+#focusConseils_3{
+    display: none;
+} 
+/*************************************** END CONSEILS *************************************************************/
+/* CATA RANDO  */
+.cataRando #section1R .firstLineTitle {
+    color: #c68d5e;
+    font-size: 40px;
+}
+
+
+.cataRando #section1R .secondLineTitle {
+    color: #4b570d;
+    margin-bottom: 5px;
+    font-size: 60px;
+    
+}
+   
+.cataRando #section1R {
+    border-bottom: 1px solid #C68D5E;
+    padding-bottom: 10px;
+}
+.cataRando #section1R div:first-child{
+    text-align: center;
+}
+.cataRando #section1R div:nth-of-type(2){
+    text-align: end;
+}
+.cataRando #section1R input[type=text]{
+    border: none;
+    border-radius: 20px;
+    padding: 12px 20px;
+    outline: none;
+}
+/***********************************************FIN MODIF SECTION TITRE*********************************************/
+
+.cataRando #section2R{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+.cataRando #section2R .card{
+    /*width: 33%;*/
+    max-width: 25%;
+    max-height: 600px;
+   position: relative;
+    margin: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cataRando  #imgRand{
+padding-bottom: 2%;
+border-radius: 20px;
+width: 100%;
+/*border: 2px solid yellow;*/
+}
+.cataRando #reservation{
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cataRando #section2R .card button:hover{
+    background-color: #FF5C24;
+}
+.cataRando #section2R .card h5 {
+    color: #4B570D;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+.coordoRando {
+  /*  border: solid red 2px;*/
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-bottom: 2%;
+}
+#imgCard{
+    width: 100%;
+    position: relative;
+}
+#texteCard{
+    align-items: center;
+
+}
+.cataRando #texteCard ul {
+  /* border: solid 1px black;*/
+   display: flex;
+   flex-wrap: wrap;
+   list-style: none;
+   padding: 0;
+   padding-bottom: 1%;
+   box-sizing: border-box;
+}
+.cataRando #texteCard ul li { 
+    color: #683614;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+   /* display:inline;*/
+   
+  
+}
+/*.cataRando #texteCard ul li p{ 
+    color: #683614;
+    margin-left: 5px;
+   /* display:inline;
+   
+  
+}*/
+.cataRando #texteCard ul li img{
+    margin-right: 2px;
+    width: 18px; 
+    height: 18px; 
+}
+.cataRando #texteCard ul li .icoDenivBas{
+    
+    width: 13px; 
+    height: 13px; 
+}
+
+.cataRando #section2R .card #texteCard li p{
+    width: 80%;
+    padding-bottom: 2%;
+    color: #DC5527;
+
+}
+.cataRando #section2R .card a:link{
+    color: #683614;
+}
+.cataRando #section2R .card a:hover{
+    border-bottom: 2px solid #683614;
+}
+.cataRando #section2R .card .niveau{
+   background-color: #FFF3E6;
+    border-radius: 20px;
+    border: 2px solid green;
+    text-align: center;
+    width: 25%;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+ 
+}
+/******************************************DEBUT FOCUS********************************************************/
+ .cataRando .focus{
+    width: 80%;
+    padding: 50px;
+    background:mistyrose;
+    margin: 20px auto;
+    border-radius: 50px;
+    display: flex;
+}
+   
+.cataRando .focus>div:first-of-type{
+overflow: hidden;
+
+}
+.cataRando .focus>div:nth-of-type(2){
+margin: 0 auto;
+width: 50%;
+}
+.cataRando #imgfocusIndex{
+    width: 350px;
+    max-height: 400px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.cataRando .focus>div{
+    margin-right: 30px;
+}
+.cataRando .focus .firstLineTitle {
+    color: #c68d5e;
+    padding: 0px;
+    margin: 0px;
+    font-size: 50px;
+    text-indent: -10%;
+    font-family: yesevaOne;
+}
+
+.cataRando .focus .secondLineTitle {
+    color: #4b570d;
+    font-size: 60px;
+    margin-bottom: 5px;
+    padding: 0px;
+    padding: 20px;
+    font-family: yesevaOne;
+}
+
+/* CONNEXION */
+
+/*Formulaire de connexion*/
+#mainConnexion {
+    display: flex;
+}
+/*container de la figure*/
+#mainConnexion figure{
+width: 50%;
+display: flex;
+padding: 0 35 px;
+} 
+/*img barbapapa connexion*/
+#mainConnexion .imgConnex{
+    max-width: 90%;
+    margin-bottom: 10px;
+ }
+
+
+/*container général*/
+#container {
+  align-items: center;
+    width: 50%; /*width:100% ; Utiliser la largeur totale sur les petits écrans */
+}
+/*div du formulaire connexion*/
+#connexion  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+
+}
+/*Centrer le titre et lui donner couleur*/
+#mainConnexion .h1Titre {
+    color: #4B570D;
+    margin-top: 50px;
+ margin-bottom: 50px;
+    font-size: 60px;
+    font-family: yesevaOne;  
+}
+/* Inputs du formulaire Connexion*/ 
+#mailConnnex {
+   border :2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6 ;
+    box-sizing: border-box;
+    
+}
+#formConnexion input {
+        border: 2px #C68D5E solid;
+        border-radius: 10px;
+        background-color: #FFF3E6;
+        box-sizing: border-box;
+        padding: 10px;
+        width: 300px; /* Largeur fixe des champs */
+        margin: 0 auto; /* Centre les champs horizontalement */
+        margin-bottom: 10px;
+        display: block;
+    }
+    
+/* Bouton Se Connecter*/
+#btnSeConnecter{
+    margin: 0 auto;
+    background-color: #DC5527;
+    color: #fff7ee;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    display: block; 
+}
+
+#btnSeConnecter:hover{
+    background-color: #FF5C24;
+}
+/* a href ppour diriger ves la page de MDP*/
+#mainConnexion .modifMdp {
+    display: block;
+    margin-bottom: 5%;
+    padding: 5px;  
+    text-decoration: underline;
+     margin: 10px;
+} 
+/* Inputs du formulaire Connexion*/
+#formConnexion input {
+    border: 2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 300px; /* Largeur fixe des champs */
+    margin: 0 auto; /* Centre les champs horizontalement */
+    margin-bottom: 10px;
+    display: block;
+}
+
+.alert-danger{
+    color:red;
+}
+
+/*Trait "Ligne vert après Modifier MDP"*/
+hr {
+        width: 40%; /* Définir la largeur de la ligne horizontale */
+        margin: 20px auto; /* Marge automatique pour centrer verticalement */
+        border: 1px solid #4B570D; /* Style de la ligne horizontale */
+  }
+/* Bouton "Je m'inscris" */
+#btnJeMinscris {
+ margin: 0 auto; 
+    background-color: #DC5527;
+    color: #fff7ee;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+   
+}
+#btnJeMinscris:hover{
+    background-color: #FF5C24;
+}
+
+/********************************************Inscription*********************************************/
+#mainInscription {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+/*container de la figure*/
+#mainInscription #imgInscription{
+width: 50%;
+}
+
+
+/*img barbapapa connexion*/
+#mainInscription img{
+    max-width: 90%;
+ }
+/*container général*/
+#containerInscription {
+    width: 40%;
+}
+/*div du formulaire Inscription*/
+#Inscription {
+    width: 100%;
+   
+}
+
+
+/*Centrer le titre et lui donner couleur*/
+#mainInscription .h1Titre {
+    color: #4B570D;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    font-size: 60px;
+    font-family: yesevaOne;  
+
+}
+/* Inputs du formulaire Inscription*/
+#formInsc input {
+    border :2px #C68D5E solid;
+    border-radius: 10px;
+    background-color: #FFF3E6 ;
+    box-sizing: border-box;
+    padding: 10px;
+    width: calc(50% - 24px);
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+#formInsc label {
+    display: none;
+}
+
+#formInsc label[for="registration_form_agreeTerms"] {
+    display: block;
+}
+
+#agreeTerms {
+    color: #683614;
+    font-size: 14px;
+    display: block;
+}
+.aInsc:hover{
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5%;
+    padding: 5px;
+    text-decoration: underline;
+}
+
+#btnsInscrire {
+   margin: 0 auto;
+    background-color: #DC5527;
+    color: #FFF7EE;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  
+}
+
+
+/* Ajoutez ces styles pour styliser le bouton s'inscrire*/
+#btnsInscrire:hover{
+    background-color: #FF5C24;
+}
+/************************************************FIN INSCRIPTION***************************************************************************/
+
+/************************************************FIN INSCRIPTION***************************************************************************/
+
+/* TABLEAU DE BORD  */
+#mainTdeBord{
+    display: flex;
+}
+/************************************DEBUT MODIF IMGNOM USER**************************************/
+#imgNomUser{
+    
+    width: 20%;
+    text-align: center;
+    padding-left: 20px;
+}
+#mainTdeBord #imgNomUser img{
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+}
+#mainTdeBord #imgNomUser div{
+    border: 1px solid;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    font-family: ralewayBold;
+
+}
+#mainTdeBord a{
+    color: #FFF3E6;
+}
+/************************************FIN MODIF IMGNOM USER**************************************/
+/************************************DEBUT MODIF RANDO USER **************************************/
+#infoUser{
+    
+    width: 80%;
+    margin-left: 20px;
+    background-image: url("/img/barbapapaAdmin.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+#mesButton{
+    display: flex;
+    justify-content: center;
+}
+#mesButton button, input[type=submit]{
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#mesButton button, input[type=submit]:hover{
+    background-color: #FF5C24;
+}
+#mesRandos button{
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#mesRandos button:hover{
+    background-color: #FF5C24;
+}
+#mesRandos{
+    margin: 0 auto;
+    width: 50%;
+    display: none;
+    height: 50vh;
+}
+#mainTdeBord .pastRando{
+    display: flex;
+    border-bottom: 1px solid grey;
+    
+}
+.infoRando{
+   margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+.pastRando figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+.pastRando img{
+   border-radius: 20px;
+   height: 10em;
+   width: 10em;
+   margin-top: 15px;
+}
+/************************************FIN MODIF PASTRANDO**************************************/
+/************************************DEBUT MODIF PROFIL USER**************************************/
+.modifRowUser {
+    padding: 12px 20px;
+    display: inline-block;
+    background-color: #FFF7EE;
+    color: #683614;
+    border: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-family: "ralewayThin";
+    font-size: 16px;
+    outline: none;
+}
+#modifUser input[type=submit]{
+ background-color: #C68D5E;
+}
+#modifUser{
+    display: flex;
+    justify-content: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #FFF3E6;
+    border-radius: 20px;
+    border: 1px solid #683614;
+}
+#modifUser .btn {
+    background-color: #C68D5E;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#modifUser .btn:hover{
+    background-color:#683614;
+}
+#formUser label {
+    display: none;
+}
+#modifUser .h1Titre {
+    color: #683614;
+    margin-top: 50px;
+ margin-bottom: 50px;
+    font-size: 60px;
+    font-family: yesevaOne;  
+}
+#modifUser #salutUser {
+    font-size: 30px;
+    font-family: yesevaOne;
+    color:#4B570D;
+}
+/************************************FIN MODIF PROFIL USER**************************************/
+/*******************************************************Début OBJECTIF***************************************************/
+ /* Remove margins and padding from the list */
+ #Objectifs ul {
+    margin: 0;
+    padding: 0;
+}
+  
+  /* Style the list items */
+#Objectifs ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #FFF7EE;
+    font-size: 18px;
+    transition: 0.2s;
+    border: 2px solid red;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+
+    
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+#Objectifs ul li:nth-child(odd) {
+    background: #683614;
+    width: 300px;
+    border-radius: 2px;
+   
+  }
+  
+  /* Darker background-color on hover */
+#Objectifs ul li:hover {
+    background: #FFF3E6;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+#Objectifs ul li.checked {
+    background: #FFF3E6;
+    color: #FFF3E6;
+    text-decoration: line-through;
+    width: 500px;
+
+}
+  
+  /* Add a "checked" mark when clicked on */
+#Objectifs ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #FFF3E6;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Style the close button */
+#Objectifs #objUser.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+
+}
+  
+#Objectifs .close:hover {
+    background-color: #683614;
+    color: #FFF3E6;
+  }
+  
+  /* Style the header */
+  #Objectifs .header {
+    background-color: #683614;
+    padding: 30px 40px;
+    text-align: center;
+  }
+  
+  /* Clear floats after the header */
+  #Objectifs .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  #Objectifs input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
+  /* Style the "Add" button */
+#Objectifs .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #FF5C24;
+    color: #FFF3E6;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+#Objectifs.addBtn:hover {
+    background-color: #FFF3E6;
+  }
+
+#Objectifs{
+    display: none;
+    height: 50vh;
+}
+
+#objUser{
+    border: 1px solid #683614;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #FFF3E6;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+      
+/***********************************************************Fin OBJECTIF***************************************************/
+/* GUIDE */
+/********DEBUT PAGE NOTRE HISTOIRE*******/
+#mainHistoire #section1 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    
+}
+
+#mainHistoire #section2 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    align-items: center;
+    
+}
+#mainHistoire #section3 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    align-items: center;
+    
+}
+
+
+/****Taille de la photo de groupe*****/
+#mainHistoire .photoGroupe {
+    height: 75vh;
+    border-radius: 10px;
+}
+
+#mainHistoire .pontForêt{
+    height: 70vh;
+    border-radius: 10px;
+}
+#mainHistoire .nosRandoBarbidoux {
+    height: 70vh;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+/*******Pour donner une forme aux paragraphes******/
+#mainHistoire .paragraphe {
+    width: 120vh;
+    display: flex;
+    flex-direction: column;  
+    padding-bottom: 10px;
+    padding-left: 50px;
+    }
+
+#mainHistoire #paraSection2 {
+    align-items:flex-start 
+}
+
+#mainHistoire #paraSection3 {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainHistoire h1 {
+    color: #4b570d;
+    font-size: 50px; 
+}
+
+#mainHistoire h1::first-line{
+    color: #c68d5e;
+}
+
+#mainHistoire #bouton {
+    align-items: center;
+    color: #FFF7EE;
+    background-color: #DC5527;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    width: 207px;
+    text-align: center;
+}
+
+
+/********FIN PAGE NOTRE HISTOIRE*******/
+/*************************************************DEBUT MODIF IMGNOM USER*****************************************************/
+#imgNomUserGuide{
+    
+    width: 20%;
+    text-align: center;
+    padding-left: 20px;
+}
+#mainGuide #imgNomUserGuide img{
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+}
+#mainGuide #imgNomUserGuide div{
+    border: 1px solid;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    font-family: ralewayBold;
+
+}
+/************************************FIN MODIF IMGNOM USER**************************************/
+/************************************DEBUT MODIF RANDO USER **************************************/
+#mainGuide #infoGuide{
+    
+    max-width: 100%;
+    background-image: url("/img/barbapapaAdmin.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+
+}
+#mainGuide #mesButtonGuide{
+    display: flex;
+    justify-content: center;
+}
+
+
+#mainGuide #monPlanning button:hover{
+    background-color: #FF5C24;
+}
+#mainGuide #monPlanning{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+#mainGuide #monGroupe{
+    display: none
+}
+
+#mainGuide #monGroupeGuide{
+    border: 1px solid #683614;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #FFF3E6;
+    border-radius: 20px;
+   
+}
+    
+#mainGuide #mesButtonGuide button{
+    background-color: #DC5527;
+    color: #FFF3E6;
+    padding: 10px 20px;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#mainGuide #mesButtonGuide button:hover{
+    background-color: #FF5C24;
+}
+/*******************************************Début mentions légales***************************************************/
+/*********Titre de la page******************/
+#mainMentions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("/img/barbapapaadmin.png");
+    background-size:contain; /*prend la taille de conteneur */
+    background-position: right;
+    background-repeat: no-repeat;
+   
+}
+#mainMentions .firstLineTitle{
+    color: #c68d5e;
+    font-size: 50px;
+    text-align: center;
+    text-indent: -10%;
+    
+}  
+#mainMentions .secondLineTitle{
+    color: #4b570d;
+    margin-bottom: 5px;
+    padding: 20px;
+    font-size: 60px;
+    text-align: center;
+}
+.scroll-section {
+    max-height: 70vh;
+    overflow-y: scroll;
+    text-align: justify;
+    padding: 20px;
+    margin:5%;
+}
+.gros-paragraphe {
+    font-size: 18px; /* Ajustez la taille de police selon vos besoins */
+    line-height: 1.52; /* Utilisez un nombre pour le multiple de la taille de police */
+    /* Ou utilisez une valeur fixe comme line-height: 24px; */
+}
+
+
+/******ADMIN******/
+
+#admin .h1Titre{
+text-align: center;
+    color: #4B570D;
+    margin-top: 50px;
+ margin-bottom: 20px;
+    font-size: 60px;
+    font-family: yesevaOne;  
+}
+
+
+#admin .tableau {
+    overflow-x: auto; 
+    margin: 0 auto; 
+    color:#683614 ;
+    font-family: ralewayRegular;
+}
+
+#admin table{
+width: 85% ;
+height: auto; /* Hauteur automatique, s'adapte au contenu */
+margin: 20px auto; /* Marge de 20px en haut et en bas, centrée horizontalement */
+padding: 10px; /* Espacement intérieur de 10px */
+border: 1px solid #683614  ; 
+border-collapse: collapse; /* Fusionne les bordures des cellules */
+}
+
+
+#admin th{
+    color: #4B570D;
+    font-weight: bold;
+}
+#admin th, td {
+    border: 1px solid #683614  ; 
+    padding: 8px; /* Espacement intérieur de 8px */
+    text-align: left; /* Alignement du texte à gauche */
+    word-wrap: break-word;
+}
+#btnCreation {
+   margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color:  #DC5527; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    cursor: pointer; /* Curseur de pointeur */
+  
+   
+}
+
+#btnCreation:hover {
+    background-color: #FF5C24; /* Couleur de fond au survol */
+}
+
+#creation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************NeWHike Admin*****************************/
+
+#containerNewHike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#newHike{
+    width: 50%;
+}
+.form-field {
+    margin-bottom: 20px; /* Ajoute de l'espace entre les champs */
+    padding: 10px; /* Ajoute du padding interne aux champs */
+    border: 1px solid #ccc; /* Bordure pour les champs */
+    border-radius: 5px; /* Bordure arrondie */
+    width: 100%; /* Assure que les champs prennent toute la largeur du conteneur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    color:#683614;
+
+}
+
+#btnsEnregNew {
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du bouton */
+    padding: 10px 20px;
+    background-color:  #DC5527; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    cursor: pointer; /* Curseur de pointeur */
+    margin-bottom: 50px;
+}
+
+#btnsEnregNew:hover {
+    background-color: #FF5C24; /* Couleur de fond au survol */
+}
+
+#btnNewRando {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainNewHike .h1Titre {
+    text-align: center;
+    color: #4B570D;
+    margin-top: 50px;
+    font-size: 60px;
+    font-family: yesevaOne; 
+    margin-bottom: 50px;
+    }
+
+/************************************************************ SHOW ******************************  */
+#show .h1Titre{
+    text-align: center;
+    color: #4B570D;
+    margin-top: 50px;
+ margin-bottom: 20px;
+    font-size: 60px;
+    font-family: yesevaOne;  
+}
+#tableShow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     width: 100%;
+    border-collapse: collapse;
+   
+ }
+
+
+#tableShow th, #tableShow td {
+    padding: 10px;
+    border: 1px solid ;
+    text-align: left;
+}
+
+#tableShow th {
+    background-color: #ECD7C2;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#tableShow tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#tableShow th, #tableShow td {
+    border: none;
+}
+
+#tableShow th {
+    order: -1; /* Place th before td */
+}
+#btnShow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#btnEdit{
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du bouton */
+    padding: 10px 20px;
+    background-color:  #DC5527; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    cursor: pointer; /* Curseur de pointeur */
+    margin-bottom: 50px;
+    margin-left: 15px;
+
+} 
+
+
+#btnEdit:hover {
+    background-color: #FF5C24; /* Couleur de fond au survol */
+}
+
+#btnDelete{
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du bouton */
+    padding: 10px 20px;
+    background-color:  #DC5527; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    cursor: pointer; /* Curseur de pointeur */
+    margin-bottom: 50px;
+   
+}
+
+#btnReturn{
+
+ margin-top: 10px;   
+}
+
+/****************************Update and Delete Hike*****************************************/
+#containerEditHike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#editHike {
+    width: 50%;
+}
+
+#formActions {
+    display: flex;
+    justify-content: center; /* Centre le bouton Modifier */
+    align-items: center;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus des actions */
+}
+
+#btnsEnregEdit {
+    margin-right: 50px;
+    padding: 10px 20px;
+    background-color: #DC5527; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    cursor: pointer; /* Curseur de pointeur */
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Ajuste la largeur du bouton à son contenu */
+}
+
+#btnsEnregEdit:hover {
+    background-color: #FF5C24; /* Couleur de fond au survol */
+}
+
+#deleteAndReturn {
+    display: flex;
+    justify-content: space-between; /* Distribue l'espace entre les éléments */
+    align-items: center;
+    margin-top: 20px; /* Ajoute de l'espace au-dessus des actions */
+    margin-bottom: 25px;
+}
+
+#btnDelete {
+    padding: 10px 20px;
+    background-color: #DC5527; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordure arrondie */
+    cursor: pointer; /* Curseur de pointeur */
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Ajuste la largeur du bouton à son contenu */
+}
+
+#btnDelete:hover {
+    background-color: #FF5C24; /* Couleur de fond au survol */
+}
+
+#retListLink:hover {
+    background-color: #FF5C24; /* Couleur de fond au survol */
+  
+}
+
+#mainEditHike .h1Titre {
+    text-align: center;
+    color: #4B570D;
+    margin-top: 50px;
+    font-size: 60px;
+    font-family: yesevaOne; 
+    margin-bottom: 50px;
+}
+
+#formEditR .form-field {
+    margin-bottom: 20px; /* Ajoute de l'espace entre les champs */
+    padding: 10px; /* Ajoute du padding interne aux champs */
+    border: 1px solid #ccc; /* Bordure pour les champs */
+    border-radius: 5px; /* Bordure arrondie */
+    width: 100%; /* Assure que les champs prennent toute la largeur du conteneur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    color:#683614
+
+
+}
+
+
+@media screen and (max-width:600px){
+    .imgConnex{
+        display: none;
+}}   
+ 
+
+
+@media screen and (max-width: 600px) {
+    footer section div {
+        justify-content: center; 
+        text-align: center; 
+       
+    
+    }
+
+    footer{
+     display: flex;    
+    }
+    
+    footer section {
+        flex-direction: column; 
+    
+    }
+    
+    #mainConnexion .h1Titre {
+    font-size: 30px;
+    }
+
+    #mainConnexion{
+        display: flex;
+
+    }
+    #mainConnexion figure{
+        display: none;
+    
+    }
+        
+    #container {
+         align-items: center;
+        width: 100%; 
+    }
+
+   footer{
+   
+    margin-top: 20px;
+    }
+}
+
+
+
+@media screen and (max-width:600px){
+      #imgInscription{
+        display: none;
+       
+     }
+
+     #mainInscription{
+     display: flex;
+        
+    }
+        
+    #containerInscription {
+        width: 100%; 
+        justify-content: center;
+    
+    }
+
+    #mainInscription .h1Titre {
+        font-size: 30px;
+}   
+}
+
+/*************************************************FIN MEDIA QUERY INDEX******************************************/
+
+@media screen and (max-width : 600px ){
+    header nav ul li{
+        display: none;
+    }
+    header nav ul li:nth-of-type(5){
+        display: block;
+    }
+    #mainIndex .texte {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mainIndex section .texte {
+        width: 80%;
+        margin: 10px;
+    }
+    #mainIndex section:nth-of-type(1) .texte {
+        margin-left: 10px;
+    }
+    #mainIndex section:nth-of-type(1) {
+        align-items: center;
+        justify-content: center;
+    }
+    #mainIndex section:nth-of-type(1) div img {
+        display:none;
+    }
+    .soeureinement::first-line {
+        font-size : 30px;
+    }
+    #mainIndex section:nth-of-type(2) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mainIndex section:nth-of-type(2) img {
+        display: none;
+    }
+    #mainIndex section:nth-of-type(3) {
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #mainIndex section:nth-of-type(3) img {
+
+        display: none;
+    }
+    #mainIndex .firstLineTitle{
+        font-size: 30px;
+        padding: 0px;
+        margin: 0px;
+
+    }  
+    #mainIndex .secondLineTitle{
+        font-size: 30px;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    h4 {
+        font-size: 18px;
+    }
+    .texte p{
+        font-size: 12px;
+    }
+    #mainIndex .focus{
+        display: none;
+    }
+    #mainTdeBord .ajoutObj input{
+        width: 40%;
+    }
+}
+/*************************************************FIN MEDIA QUERY INDEX******************************************/

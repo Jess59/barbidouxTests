@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hike{% endblock %}
+
+{% block body %}
+
+<main id="show">
+
+    <h1 class="h1Titre">Randonnée</h1>
+
+    <table id ="tableShow" class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ hike.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom de la Randonnée</th>
+                <td>{{ hike.nameHike }}</td>
+            </tr>
+            <tr>
+                <th> Description </th>
+                <td>{{ hike.descHike }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ hike.cityHike }}</td>
+            </tr>
+            <tr>
+                <th>Temps</th>
+                <td>{{ hike.timeHike }}</td>
+            </tr>
+            <tr>
+                <th>Distance</th>
+                <td>{{ hike.distHike }}</td>
+            </tr>
+            <tr>
+                <th>Dénivelé haut</th>
+                <td>{{ hike.heightHike }}</td>
+            </tr>
+            <tr>
+                <th>Dénivelé bas</th>
+                <td>{{ hike.downHike }}</td>
+            </tr>
+            <tr>
+                <th>Niveau</th>
+                <td>{{ hike.difficultyHike }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+<div id="btnShow">
+   <a id="btnReturn" href="{{ path('app_admin_index') }}">Retour à la liste </a>
+    
+</div> 
+ 
+<div id="delete">  
+<form method="post" action="{{ path('app_admin_delete', {'id': hike.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ hike.id) }}">
+    <button id="btnDelete" class="btn">Supprimer</button>
+    <a id="btnEdit" href="{{ path('app_admin_edit', {'id': hike.id}) }}">Modifier</a>
+</form>
+</div> 
+</main>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<main class="cataRando">
+     <!------------------------------------------------------"DEBUT SECTION TITRE"-------------------------------------->
+        <section id="section1R">
+            <div>
+                <h3 class="firstLineTitle">Trouvez votre prochaine</h3>
+                <h2 class="secondLineTitle">Randonnée</h2>
+            </div>
+            <div>
+                <input placeholder="Recherche" type="text" id="Mapbar" name="Mapbar" value="" >
+            </div>
+        </section>
+     <!------------------------------------------------------"FIN SECTION TITRE"-------------------------------------->
+     <!------------------------------------------------------"DEBUT SECTION CARTES"-------------------------------------->
+    
+        <section id="section2R">
+            {% for hike in hikes %}
+                <div class="card">
+                    <div id="imgCard">                  
+                        <img id="imgRand"  src="/img/Saintjanscappel.JPG" alt="Saint Jans Cappel">
+                        <div class="niveau">
+                        <p> {{ hike.difficultyHike }} </p>
+                        </div>
+                    </div>
+                    <div id="texteCard"> 
+                        <h5>{{ hike.nameHike }}<br>{{ hike.cityHike }}</h5>
+                        <ul>
+                            <li><img class="icoDuree" src="/icones/icoDuree.svg" alt="Durée de randonnée"><p>{{ hike.timeHike}}</p></li> 
+                            <li><img class="icoDistance" src="/icones/icoDistance.svg" alt="Distance de la randonnée"><p>{{ hike.distHike}}</p></li>
+                            <li><img class="icoDenivHaut" src="/icones/icoDenivHaut.svg" alt="Dénivélé haut"><p>{{hike.heightHike}}</p></li>
+                            <li><img class="icoDenivBas" src="/icones/icoDenivBas.svg" alt="Dénivélé bas"><p>{{hike.downHike}}</p></li>
+                        </ul> 
+                        <p> {{ hike.descHike }}</p>
+                        <a href="#">En savoir +</a> 
+                    </div>
+                    <button id="reservation">Réservation</button>    
+                    </div>
+            {% endfor %}
+        </section>
+          
+
+    <!------------------------------------------------------"SECTION FOCUS DEBUT"-------------------------------------->    
+        
+ <section class="focus">
+        <div>
+            <img id="imgfocusIndex" src="{{ asset('/img/photo4acceuil.JPG')}}" alt="photo4acceuil">  
+        </div>
+        <div class="texte">
+            <h3 class="firstLineTitle">Nos</h3>
+            <h2 class="secondLineTitle">randonnées</h2>
+            <p>
+                Sous le ciel clément d'une matinée d'automne, un petit groupe de femmes s'était donné rendez-vous au
+                pied d'une montagne majestueuse. Leur objectif était simple : explorer la nature, se reconnecter à
+                elles-mêmes, et trouver la paix intérieure à travers une journée de randonnée.
+                Les sentiers étaient bordés de couleurs automnales éclatantes, et le doux parfum des feuilles tombées
+                imprégnait l'air. Les femmes marchaient à un rythme tranquille, prenant le temps d'admirer la beauté qui
+                les entourait. La nature leur offrait un spectacle vibrant de couleurs et de sons.
+            </p>
+            <br>
+            <a href="{{ path('app_hike') }}">Nos Randonnées</a>
+        </div>
+    </section>
+    <!------------------------------------------------------"SECTION FOCUS FIN"-------------------------------------->
+    </main>
+   
+
+
+{% endblock %}

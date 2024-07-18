@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<main id="mainTdeBord">
+    <section id="imgNomUser">
+        <figure>
+            <img src="{{ asset('/img/cisse.JPG')}}"alt="Photo User">
+        </figure>
+        <div>
+            {% if app.user %}
+            <p>{{ app.user.nameUser }}</p>
+            {% endif  %}
+        </div>
+    </section>
+    <section id="infoUser">
+        <div id="mesButton">
+            <button id="bMesRandos">Mes randonnées</button>
+            <button id="bProfil">Profil</button>
+            <button id="bMesObj">Mes objectifs</button>
+        </div>
+        <div id="mesRandos">
+            <div class="pastRando">
+                <figure><img src="{{ asset('/img/Saintjanscappel.JPG')}}" alt="Saint Jans Cappel"></figure>
+                <div class="infoRando">
+                    <p>Ma randonnée du 08/08/23</p>
+                    <p>Le mont des récollets - Cassel</p>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <button>Ajouter un avis</button>
+                </div>
+            </div>
+            <div class="pastRando">
+                <figure><img src="/img/Saintjanscappel.JPG" alt="Saint Jans Cappel"></figure>
+                <div class="infoRando">
+                    <p>Ma randonnée du 08/08/23</p>
+                    <p>Le mont des récollets - Cassel</p>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <button>Ajouter un avis</button>
+                </div>
+            </div>
+        </div>
+        <div id="modifUser">
+            <div id="formUser">
+            <br>
+                    {% if app.user %}
+                        <div id="salutUser">
+                        Bonjour
+                        {{ app.user.nameUser }}
+                        </div>
+                    {% endif  %}
+                {{ form_errors(updateForm)}}
+                {{ form_start(updateForm)}}
+                    {{ form_row(updateForm.mailUser,{'attr': {'placeholder': 'Mail', 'class': 'modifRowUser'}})}}
+                    <br>
+                    {{ form_row(updateForm.lastnameUser,{'attr': {'placeholder': 'Nom de famille', 'class': 'modifRowUser'}})}}
+                    <br>
+                    {{ form_row(updateForm.nameUser,{'attr': {'placeholder': 'Prénom', 'class': 'modifRowUser'}})}}
+                    <br>
+                    {{ form_row(updateForm.nName,{'attr': {'placeholder': 'Surnom', 'class': 'modifRowUser'}})}}
+                    <!-- Add other form fields as needed -->
+                    <button type="submit" class="btn">Mettre à jour</button>
+                    <div>
+                        <button class="btn"><a href="{{ path('app_logout') }}">Déconnexion</a></button>
+                    </div>
+                {{ form_end(updateForm)}}
+                {# Bouton de suppression de compte #}
+                <form action="{{ path('app_deleteUser', {id: app.user.id}) }}" method="post" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ?');">
+                    <button type="submit" class="btn btn-danger">Supprimer mon compte</button>
+                </form>
+            </div>
+     </div>
+        <div id="Objectifs">
+            <div id="objUser" class="header">
+                <input type="text" id="myInput" placeholder="Ajouter un objectif" value="" size="50">
+                <span onclick="newElement()" class="addBtn">Ajouter</span>
+                 <ul id="myUL">
+                 </ul>
+            </div>
+        
+        </div>
+    </div>
+    </section>
+</main>
+{% endblock %}

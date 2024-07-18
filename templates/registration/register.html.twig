@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<main id="mainInscription">
+    <div id="containerInscription">
+
+        <div id="Inscription">
+            <h1 class="h1Titre">Je m'inscris</h1>
+
+
+    {{ form_errors(registrationForm) }}
+    <div id="formInsc">
+        {{ form_start(registrationForm) }}
+
+            
+            {{ form_row(registrationForm.nameUser, {'attr': {'placeholder': 'Prenom', 'id': 'prenomInsc'} }) }}
+                {{ form_row(registrationForm.lastnameUser, { 'attr': {'placeholder': 'Nom', 'id': 'nomInsc'} }) }}
+                {{ form_row(registrationForm.mailUser, { 'attr': {'placeholder': 'E-mail', 'id': 'emailInsc'} }) }}
+                {{ form_row(registrationForm.plainPassword, {'attr': {'placeholder': 'Mot de passe', 'id': 'mdpInsc'} }) }}
+                {{ form_row(registrationForm.agreeTerms, {'attr': {'id': 'agreeTerms'} }) }}
+            <button type="submit" class="btn" id="btnsInscrire" size="40">S'inscrire</button>
+        {{ form_end(registrationForm) }}
+    </div>
+
+            <hr>
+            <br>
+            <a href="{{ path('app_login') }}">J'ai déjà un compte?</a>
+            <br>
+        </div>
+    </div>
+    <figure id="imgInscription">
+        <img src="{{ asset('/img/photoConnexion2.png')}}" alt="Image connexion un prés vert">
+    </figure>
+</main>
+
+{% endblock %}
+

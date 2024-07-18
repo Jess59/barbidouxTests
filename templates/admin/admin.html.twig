@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    
+<main id="admin">
+<h1 class="h1Titre" >NOS RANDONNEES</h1>
+<div class="tableau">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom de la randonnée</th>
+                <th>Description randonnée</th>
+                <th>Ville</th>
+                <th>Durée</th>
+                <th>Distance</th>
+                <th>Dénivelé haut</th>
+                <th>Dénivelé bas</th>
+                <th>Niveau</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hike in hikes %}
+            <tr>
+                <td>{{ hike.id }}</td>
+                <td>{{ hike.nameHike }}</td>
+                <td>{{ hike.descHike }}</td>
+                <td>{{ hike.cityHike }}</td>
+                <td>{{ hike.timeHike }}</td>
+                <td>{{ hike.distHike }}</td>
+                <td>{{ hike.heightHike }}</td>
+                <td>{{ hike.downHike }}</td>
+                <td>{{ hike.difficultyHike }}</td>
+                <td>
+                    <a  href="{{ path('app_admin_show', {'id': hike.id}) }}">Montrer</a>
+                    <a href="{{ path('app_admin_edit', {'id': hike.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div> 
+<div id="creation">
+    <a id="btnCreation" href="{{ path('app_admin_new') }}">Nouvelle randonnée</a>  
+</div> 
+</main>
+    
+{% endblock %}

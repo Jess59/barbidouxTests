@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Soeureinement</title>
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('/fonts/yesevaone-regular2.woff') }}">
+        <link rel="stylesheet" href="{{ asset('/fonts/raleway-regular.woff') }}">
+        <link href="{{ asset('/img/logoSoeur.png') }}" type="image/x-icon" rel="soeur icon">
+    <body>
+        <header>
+            <div>
+                <img src="{{ asset('/img/logoSoeur.png') }}" alt="logo Soeureinement">
+                <p>soeureinement</p>
+            </div>
+            <nav>
+                <ul>
+                     <li><a href="{{ path('app_index') }}">Accueil</a></li> 
+                    <li><a href="{{ path('app_hike') }}">Nos randonnées</a></li>
+                    <li><a href="{{ path('app_conseils') }}">Conseils</a></li>
+                    <li>|</li>
+                     <li><a href="{{ path('app_login') }}"><img src="{{ asset('/icones/icoConex.png') }}" alt="#Connexion"></a></li> 
+                </ul>
+            </nav>
+        </header>  
+        {% block body %}{% endblock %}
+                                                            {# FOOTER#}
+        <footer>
+            <section id="firstSectionFooter">
+                <div id="logoFooter">
+                    <img src="{{ asset('/img/logoSoeur.png') }}" alt="logo Soeureinement">
+                   <p class="firstli">Soeureinement</p>
+                </div>
+                
+                <div>
+                <ul>
+                    <li class="firstLiFooter"><a href="{{ path('app_hike') }}">Nos randonnées</a></li><br>
+                    <li><a href="{{ path('app_hike') }}">Facile</a></li>
+                    <li><a href="{{ path('app_hike') }}">Moyen</a></li>
+                    <li><a href="{{ path('app_hike') }}">Difficile</a></li>
+                </ul>
+                </div>
+                <div>
+                <ul>
+                    <li class="firstLiFooter"><a href="{{ path('app_conseils') }}">Nos conseils</a></li><br>
+                    <li><a href="{{ path('app_conseils') }}">Equipements</a></li>
+                    <li><a href="{{ path('app_conseils') }}">Santé</a></li>
+                    <li><a href="{{ path('app_conseils') }}">Tous les conseils</a></li>
+                </ul>
+                </div>
+
+                <div>
+                <ul>
+                    <li class="firstLiFooter"><a href="#">Soeureinement</a></li><br>
+                    <li><a href="mailto: soeureinement.rando@gmail.com">Contact</a></li>
+                    <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+                    <li><a href="{{ path('app_register') }}">S'inscrire</a></li>
+                </ul>
+                </div>
+
+                <div>
+                <ul id="NousSuivre">
+                    <li class="firstLiFooter">Nous suivre</li>
+                    <li><a href="http://www.instagram.com/Soeureinement" target="_blank"><img  id=logoinsta src="{{ asset('/icones/icoInsta.png') }}" alt=""></a></li>
+                </ul>
+                </div>
+            </section>
+            <section id="sectionMentionsLegales">
+                <ul>
+                    <li><a href="{{ path('app_mLegales') }}">Mentions Légales</a></li>
+                    <li><a href="#">Design by Hidden figures</a></li>
+                    <li><img id="logoshoes" src="{{ asset('/icones/shoes.png') }}" alt=""><a href="{{ path('app_index') }}"></a></li>
+                </ul>
+
+      
+            </section>
+        </footer>
+        <script src="{{ asset('/js/script.js') }}"></script>
+    </body>
+</html>
