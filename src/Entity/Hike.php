@@ -7,6 +7,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\UX\Turbo\Attribute\Broadcast;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: HikeRepository::class)]
 #[Broadcast]
@@ -15,33 +17,47 @@ class Hike
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups("hike:read")]
+    
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
     private ?string $nameHike = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups("hike:read")]
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 5)]
     private ?string $descHike = null;
 
     #[ORM\OneToMany(mappedBy: 'hikeId', targetEntity: Reservation::class, orphanRemoval: true)]
+    #[Groups("hike:read")]
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 5)]
     private Collection $reservations;
 
     #[ORM\Column(length: 30, nullable: true)]
     private ?string $cityHike = null;
 
     #[ORM\Column(nullable: true)]
+    #[Groups("hike:read")]
     private ?float $timeHike = null;
 
     #[ORM\Column(length: 10, nullable: true)]
+    #[Groups("hike:read")]
     private ?string $distHike = null;
 
     #[ORM\Column(length: 30, nullable: true)]
+    #[Groups("hike:read")]
     private ?string $heightHike = null;
 
     #[ORM\Column(length: 30, nullable: true)]
+    #[Groups("hike:read")]
     private ?string $downHike = null;
+    
 
     #[ORM\Column(length: 10, nullable: true)]
+    #[Groups("hike:read")]
     private ?string $difficultyHike = null;
 
     public function __construct()
