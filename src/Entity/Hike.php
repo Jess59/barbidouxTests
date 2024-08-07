@@ -11,13 +11,9 @@ use Symfony\UX\Turbo\Attribute\Broadcast;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
-
-
 #[ORM\Entity(repositoryClass: HikeRepository::class)]
 #[ApiResource]
 #[Broadcast]
-#[ApiResource]
 class Hike
 {
     #[ORM\Id]
