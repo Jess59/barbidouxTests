@@ -15,6 +15,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 #[ORM\Entity(repositoryClass: HikeRepository::class)]
+#[ApiResource]
 #[Broadcast]
 #[ApiResource]
 class Hike

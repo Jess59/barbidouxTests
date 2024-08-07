@@ -1,8 +1,7 @@
 <?php
-
 namespace App\Controller;
 
-use App\Entity\Post; 
+use App\Entity\Hike; 
 use App\Repository\HikeRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,6 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+
 
 class ApiPostController extends AbstractController
 {
@@ -24,17 +24,17 @@ class ApiPostController extends AbstractController
 
     public function store(Request $request, SerializerInterface $serializer, EntityManagerInterface $em, ValidatorInterface $validator)
     {
-        $jsonRecu = $request->getContent();
+        $jsonRecu = $request->getContent(); /**ligne à pb */
+        
         try {
-            $post = $serializer->deserialize($jsonRecu, Post::class, 'json');
-            $post->setCreatedAt(new \DateTime());
-            $errors = $validator->validate($post);
+            $hike = $serializer->deserialize($jsonRecu, Hike::class, 'json');
+            $errors = $validator->validate($hike);
             if (count($errors) > 0) {
                 return $this->json($errors, 400);
             }
-            $em->persist($post);
+            $em->persist($hike);
             $em->flush();
-            return $this->json($post, 201, [], ['groups' => 'post:read']);
+            return $this->json($hike, 201, [], ['groups' => 'hike:read']);
         } catch (NotEncodableValueException $e) {
             return $this->json([
                 'status' => 400,
